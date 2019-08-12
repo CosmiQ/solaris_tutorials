@@ -9,7 +9,7 @@ Note that many of the workshops may require access to (at times substantial) GPU
 
 ## Workshop list and topics
 
-### [FOSS4G 2019 Workshop on Solaris](Solaris_Foss4G_2019/)
+### [FOSS4G 2019 Workshop on Solaris](https://github.com/CosmiQ/solaris_tutorials/tree/master/Solaris_FOSS4G_2019)
 
 #### Requirements:
 
