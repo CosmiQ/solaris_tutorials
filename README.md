@@ -1,4 +1,7 @@
 # Workshop and tutorial materials for `solaris`
+<p align="center">
+<img src="https://github.com/CosmiQ/solaris_tutorials/blob/master/solaris_powered_by.png" width="350" alt="Powered by Solaris">
+</p>
 
 This repo contains materials from CosmiQ Works' open source and/or public workshops on using `solaris` for geospatial ML applications. Each sub-directory corresponds to a specific workshop or tutorial. Some of the workshop materials will require additional data download and/or preparation beyond the contents of the repository; see the README files within each workshop for additional instructions.
 
