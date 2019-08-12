@@ -1,0 +1,125 @@
+model_name: xdxd_spacenet4
+
+model_path:
+train: true
+infer: true
+
+pretrained: true
+nn_framework:  torch
+batch_size: 12
+
+data_specs:
+  width: 512
+  height:  512
+  image_type: zscore
+  rescale: false
+  rescale_minima: auto
+  rescale_maxima: auto
+  channels: 3
+  label_type: mask
+  is_categorical: false
+  mask_channels: 1
+  val_holdout_frac: 0.025
+  data_workers:
+
+training_data_csv: 'data/workshop_configs/khartoum_train.csv'
+validation_data_csv:
+inference_data_csv: 'data/workshop_configs/khartoum_inf.csv'
+
+training_augmentation:
+  augmentations:
+    SwapChannels:
+      axis: 2
+      first_idx: 0
+      second_idx: 2
+      p: 1.0
+    HorizontalFlip:
+      p: 0.5
+    RandomRotate90:
+      p: 0.5
+    RandomCrop:
+      height: 512
+      width: 512
+      p: 1.0
+    Normalize:
+      mean:
+        - 0.008168729867753285
+        - 0.00925316105319106
+        - 0.006374030239981403
+      std:
+        - 0.0015652700379067738
+        - 0.0015060764772977708
+        - 0.0008859458739022634
+      max_pixel_value: 65535.0
+      p: 1.0
+  p: 1.0
+  shuffle: true
+validation_augmentation:
+  augmentations:
+    SwapChannels:
+      axis: 2
+      first_idx: 0
+      second_idx: 2
+      p: 1.0
+    CenterCrop:
+      height: 512
+      width: 512
+      p: 1.0
+    Normalize:
+      mean:
+        - 0.008168729867753285
+        - 0.00925316105319106
+        - 0.006374030239981403
+      std:
+        - 0.0015652700379067738
+        - 0.0015060764772977708
+        - 0.0008859458739022634
+      max_pixel_value: 65535.0
+      p: 1.0
+  p: 1.0
+inference_augmentation:
+  augmentations:
+    SwapChannels:
+      axis: 2
+      first_idx: 0
+      second_idx: 2
+      p: 1.0
+    Normalize:
+      mean:
+        - 0.008168729867753285
+        - 0.00925316105319106
+        - 0.006374030239981403
+      std:
+        - 0.0015652700379067738
+        - 0.0015060764772977708
+        - 0.0008859458739022634
+      max_pixel_value: 65535.0
+      p: 1.0
+  p: 1.0
+training:
+  epochs:  2
+  steps_per_epoch:
+  optimizer: Adam
+  lr: 1e-5
+  opt_args:
+  loss:
+    bcewithlogits:
+    jaccard:
+  loss_weights:
+    bcewithlogits: 10
+    jaccard: 2.5
+  metrics:
+    training:
+    validation:
+  checkpoint_frequency: 10
+  callbacks:
+    model_checkpoint:
+      filepath: 'data/models/xdxd_khartoum_best.pth'
+      monitor: val_loss
+  model_dest_path: 'data/models/xdxd_khartoum_final.pth'
+  verbose: true
+
+inference:
+  window_step_size_x:
+  window_step_size_y:
+  output_dir: 'xdxd_inference_out/'
