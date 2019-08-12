@@ -97,7 +97,7 @@ inference_augmentation:
       p: 1.0
   p: 1.0
 training:
-  epochs:  2
+  epochs:  3
   steps_per_epoch:
   optimizer: Adam
   lr: 1e-5
@@ -122,4 +122,4 @@ training:
 inference:
   window_step_size_x:
   window_step_size_y:
-  output_dir: 'xdxd_inference_out/'
+  output_dir: 'xdxd_retrain_inference_out/'
