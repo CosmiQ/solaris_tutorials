@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/foss4g_solaris.png" width="350" alt="Powered by Solaris">
+<img src="https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/foss4g_solaris.png" width="650" alt="Powered by Solaris">
 </p>
 
 # Materials for the `solaris` workshop at FOSS4G International 2019
