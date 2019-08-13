@@ -29,3 +29,15 @@ You'll need to have `solaris` [installed](https://solaris.readthedocs.io/en/late
 All of these notebooks _can_ be run on a laptop; however, the re-training step in `4_fine_tuning_a_spacenet_model.ipynb` is _extremely_ slow (likely >1 day) without access to a GPU. If you lack GPU compute resources, we recommend you simply follow along through the end of that notebook rather than re-training from scratch.
 
 __Even if you have GPU resources, they may not have enough GPU memory to hold some of the models within these notebooks__. These models were trained on 2xTitan Xp GPUs with a total of 24 GB GPU memory. If you find yourself encountering GPU errors, you can [modify the YAML config files](https://solaris.readthedocs.io/en/latest/tutorials/notebooks/creating_the_yaml_config_file.html) in the `data/workshop_configs` directory to reduce the batch size of the models. Though this will change performance subtly and slow training down somewhat, it should allow you to complete the tutorials.
+
+#### Recommended order
+
+We recommend you go through the contents of this workshop in the following order:
+1. [CosmiQ_Solaris_FOSS4G_Workshop_Intro.pdf](https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/CosmiQ_Solaris_FOSS4G_Workshop_Intro.pdf)
+2. [1_intro_to_solaris.ipynb](https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/1_intro_to_solaris.ipynb)
+3. [2_under_the_hood.ipynb](https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/2_under_the_hood.ipynb) When that suggests you pause to look at slides, check out
+4. [CosmiQ_Solaris_Inference_Intro.pdf](https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/CosmiQ_Solaris_Inference_Intro.pdf), then go back to 2_under_the_hood.ipynb.
+5. [3_evaluating_performance.ipynb](https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/3_evaluating_performance.ipynb)
+6. [CosmiQ_Solaris_Evaluating_Perfomance.pdf](https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/CosmiQ_Solaris_Evaluating_Perfomance.pdf), then back to 3_evaluating_performance.ipynb
+7. [CosmiQ_Solaris_Training_Intro.pdf](https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/CosmiQ_Solaris_Training_Intro.pdf)
+8. [4_fine_tuning_a_spacenet_model.ipynb](https://github.com/CosmiQ/solaris_tutorials/blob/master/Solaris_FOSS4G_2019/4_fine_tuning_a_spacenet_model.ipynb). Note that model re-training within this notebook takes a lot of computing power, but the results are pre-filled so you can follow along even if you don't have access.
