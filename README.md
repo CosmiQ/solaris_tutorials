@@ -1,4 +1,4 @@
-# Workshop and tutorial materials for `solaris`
+<h1 align="center"> Workshop and tutorial materials for solaris </h1>
 <p align="center">
 <img src="https://github.com/CosmiQ/solaris_tutorials/blob/master/solaris_powered_by.png" width="350" alt="Powered by Solaris">
 </p>
