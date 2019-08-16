@@ -12,7 +12,7 @@ All workshop participants will be provided with access to a Jupyter Notebook run
 
 ## Notes for non-workshop participants
 
-This workshop uses a number of files from the [SpaceNet Datasets](https://spacenet.ai) which are not included within the repository. Specifically, you'll need to add a few subdirectories to the `data` folder here. The instructions for doing so are below.
+This workshop uses a number of files from the [SpaceNet Datasets](https://spacenet.ai) which are not included within the repository. Specifically, you'll need to add a few subdirectories to the `data` folder here, and update a few of the paths in config and .csv files under `data/workshop_configs`. The instructions for doing so are below.
 
 #### Data preparation for use within the notebooks:
 
@@ -21,6 +21,10 @@ This workshop uses a number of files from the [SpaceNet Datasets](https://spacen
 3. Decompress the tarball that you downloaded
 4. Move the `RGB-PanSharpen` directory from the new `AOI_5_Khartoum_Train` directory from the tarball into the `Khartoum_data` directory, and rename it `RGB_imagery`
 5. Copy the `buildings` directory from the `AOI_5_Khartoum_Train/geojson` directory into the `Khartoum_data` directory, and rename it `geojson`
+6. Open each .yml file under workshop_configs and update the `inference_data_csv` value to point correctly to the file in your data folder.
+7. In the `xdxd_workshop_khartoum_train.yml` file, change the `training_data_csv` path to point correctly to the corresponding file in your data folder.
+8. Open the CSV files and update the `/data` paths to point instead to wherever you've stored the `data` directory.
+9. In the first code cell of each Jupyter notebook, the variable `data_path` is assigned to `/data`. You'll need to update this to point to your data path.
 
 #### `solaris` installation
 You'll need to have `solaris` [installed](https://solaris.readthedocs.io/en/latest/installation.html) to run the code contained within these notebooks.
