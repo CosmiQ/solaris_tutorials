@@ -22,9 +22,9 @@ data_specs:
   val_holdout_frac: 0.025
   data_workers:
 
-training_data_csv: 'data/workshop_configs/khartoum_train.csv'
+training_data_csv: '/data/workshop_configs/khartoum_train.csv'
 validation_data_csv:
-inference_data_csv: 'data/workshop_configs/khartoum_inf.csv'
+inference_data_csv: '/data/workshop_configs/khartoum_inf.csv'
 
 training_augmentation:
   augmentations:
@@ -114,9 +114,9 @@ training:
   checkpoint_frequency: 10
   callbacks:
     model_checkpoint:
-      filepath: 'data/models/xdxd_khartoum_best.pth'
+      filepath: 'models/xdxd_khartoum_best.pth'
       monitor: val_loss
-  model_dest_path: 'data/models/xdxd_khartoum_final.pth'
+  model_dest_path: 'models/xdxd_khartoum_final.pth'
   verbose: true
 
 inference:
