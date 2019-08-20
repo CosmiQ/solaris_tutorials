@@ -24,7 +24,7 @@ data_specs:
 
 training_data_csv: '/path/to/training_df.csv'
 validation_data_csv:
-inference_data_csv: '/data/workshop_configs/mvoi_inf.csv'
+inference_data_csv: 'data/workshop_configs/mvoi_inf.csv'
 
 training_augmentation:
   augmentations:
