@@ -16,7 +16,7 @@ This workshop uses a number of files from the [SpaceNet Datasets](https://spacen
 
 #### Data preparation for use within the notebooks:
 
-1. [Download the Khartoum training dataset from the SpaceNet AWS S3 bucket](http://s3.amazonaws.com/spacenet-dataset/spacenet-dataset/SpaceNet_Buildings_Dataset_Round2/spacenetV2_Train/AOI_5_Khartoum_Train.tar.gz) __5 GB download__
+1. [Download the Khartoum training dataset from the SpaceNet AWS S3 bucket](http://s3.amazonaws.com/spacenet-dataset/spacenet/SN2_buildings/tarballs/SN2_buildings_train_AOI_5_Khartoum.tar.gz) __5 GB download__
 2. Create a directory under the `data` folder called `Khartoum_data`
 3. Decompress the tarball that you downloaded
 4. Move the `RGB-PanSharpen` directory from the new `AOI_5_Khartoum_Train` directory from the tarball into the `Khartoum_data` directory, and rename it `RGB_imagery`
