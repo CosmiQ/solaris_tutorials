@@ -25,6 +25,7 @@ This workshop uses a number of files from the [SpaceNet Datasets](https://spacen
 7. In the `xdxd_workshop_khartoum_train.yml` file, change the `training_data_csv` path to point correctly to the corresponding file in your data folder.
 8. Open the CSV files and update the `/data` paths to point instead to wherever you've stored the `data` directory.
 9. In the first code cell of each Jupyter notebook, the variable `data_path` is assigned to `/data`. You'll need to update this to point to your data path.
+10. Create a directory under the `Solaris_FOSS4G_2019` folder called `models` 
 
 #### `solaris` installation
 You'll need to have `solaris` [installed](https://solaris.readthedocs.io/en/latest/installation.html) to run the code contained within these notebooks.
